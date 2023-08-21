@@ -24,7 +24,31 @@ const Signup = () => {
                 type='text'
                 value={username}
                 onChange={(e) => setUser({ ...user, username: e.target.value })}
+                placeholder='username'
             />
+            <label htmlFor='email'>Email:</label>
+            <input
+                id='email'
+                type='email'
+                value={email}
+                onChange={(e) => setUser({ ...user, email: e.target.value })}
+                placeholder='email'
+            />
+            <label htmlFor='password'>Password:</label>
+            <input
+                id='password'
+                type='password'
+                value={password}
+                onChange={(e) => setUser({ ...user, password: e.target.value })}
+                placeholder='password'
+            />
+            <button
+                onClick={onSignup}
+            >
+                Sign Up
+            </button>
+            <p>Already have an account?</p>
+            <Link href='/login'>Log in here</Link>
         </div>
     );
 };
